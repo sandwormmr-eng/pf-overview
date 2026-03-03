@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokerFlops × SOPO — Operations Overview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0d0d; color: #e8e8e8; font-family: 'Inter', -apple-system, sans-serif; padding: 40px 32px; max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .subtitle { color: #888; font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 16px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  
+  /* Status pills */
+  .done    { background: #1a3a1a; color: #4caf50; border: 1px solid #2d5a2d; }
+  .wip     { background: #3a2a0a; color: #ffa726; border: 1px solid #5a3f0a; }
+  .planned { background: #1a1a3a; color: #7986cb; border: 1px solid #2d2d5a; }
+  .blocked { background: #3a1a1a; color: #ef5350; border: 1px solid #5a2020; }
+  .pill    { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 32px; }
+  @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+  .card { background: #161616; border: 1px solid #222; border-radius: 12px; padding: 20px; }
+  .card-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .card-title .icon { font-size: 18px; }
+
+  .item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #1e1e1e; }
+  .item:last-child { border-bottom: none; }
+  .item-text { flex: 1; font-size: 13px; color: #ccc; line-height: 1.4; }
+  .item-text strong { color: #fff; }
+  .item-text .sub { color: #666; font-size: 12px; margin-top: 2px; }
+
+  /* Flywheel */
+  .flywheel { background: #161616; border: 1px solid #222; border-radius: 12px; padding: 24px; margin-bottom: 32px; }
+  .flywheel-row { display: flex; align-items: center; gap: 0; overflow-x: auto; padding: 8px 0; }
+  .fw-step { text-align: center; min-width: 130px; flex-shrink: 0; }
+  .fw-box { background: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 14px 10px; margin: 0 4px; }
+  .fw-box .label { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .fw-box .sub { font-size: 11px; color: #666; line-height: 1.3; }
+  .fw-arrow { color: #444; font-size: 20px; flex-shrink: 0; padding: 0 4px; }
+  .highlight .fw-box { border-color: #ffa726; background: #1e1600; }
+  .highlight .fw-box .label { color: #ffa726; }
+
+  /* Stats */
+  .stats-row { display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
+  .stat { background: #161616; border: 1px solid #222; border-radius: 10px; padding: 16px 20px; flex: 1; min-width: 140px; }
+  .stat .num { font-size: 26px; font-weight: 700; color: #fff; }
+  .stat .label { font-size: 12px; color: #666; margin-top: 2px; }
+
+  /* Section divider */
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #555; margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #1e1e1e; }
+
+  .full-width { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+
+<h1>PokerFlops × SOPO — Full Operations Picture</h1>
+<p class="subtitle">Everything built, in progress, and planned — as of March 3, 2026</p>
+
+<!-- THE FLYWHEEL -->
+<div class="section-label">The Content Flywheel</div>
+<div class="flywheel">
+  <div class="flywheel-row">
+    <div class="fw-step highlight">
+      <div class="fw-box"><div class="label">🎮 SOPO Streams</div><div class="sub">Kick live streams<br>ring games + tournaments</div></div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-step highlight">
+      <div class="fw-box"><div class="label">✂️ AI Clip Maker</div><div class="sub">Auto-clips viral moments<br>word-level captions</div></div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-step">
+      <div class="fw-box"><div class="label">📱 Social Posts</div><div class="sub">TikTok · Reels<br>Shorts · Twitter/X</div></div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-step">
+      <div class="fw-box"><div class="label">📰 PokerFlops Site</div><div class="sub">Articles · Newsletter<br>WSOP Tool · SEO</div></div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-step highlight">
+      <div class="fw-box"><div class="label">📧 Email Capture</div><div class="sub">2,483 subscribers<br>Issue #3 sent</div></div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-step highlight">
+      <div class="fw-box"><div class="label">🎯 SOPO Signups</div><div class="sub">playsopo.com<br>UTM tracked</div></div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-step">
+      <div class="fw-box"><div class="label">💰 Deposits + Rake</div><div class="sub">Revenue<br>Retention</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- KEY STATS -->
+<div class="section-label">Key Numbers</div>
+<div class="stats-row">
+  <div class="stat"><div class="num">58.3K</div><div class="label">TikTok followers @pokerflops</div></div>
+  <div class="stat"><div class="num">2,483</div><div class="label">Email subscribers</div></div>
+  <div class="stat"><div class="num">45K+</div><div class="label">SOPO users (Firestore)</div></div>
+  <div class="stat"><div class="num">7,191</div><div class="label">SOPO Pro beta signups</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">Newsletter issues sent</div></div>
+  <div class="stat"><div class="num">~$87M</div><div class="label">ClubWPT est. annual rev (target to beat)</div></div>
+</div>
+
+<!-- DONE -->
+<div class="section-label">✅ Shipped</div>
+<div class="grid-2">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">⚙️</span> Core Infrastructure</div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Mr. Sandworm (OpenClaw agent)</strong> — Running on MacBook, Telegram-connected, full workspace<div class="sub">Memory system, cron jobs, heartbeat checks, Notion board</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>WordPress API (pokerflops.org)</strong> — Full read/write, drafts + publish<div class="sub">REST API v2, application password auth</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Resend Email Pipeline</strong> — Send newsletter to 2,483 subs<div class="sub">Subscriber fetch via HTTP API, UTM tracking to playsopo.com</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Twitter/X API</strong> — Post tweets programmatically<div class="sub">@TeamPokerFlops, xurl CLI</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Instagram Graph API</strong> — Photo + carousel posting<div class="sub">@pokerflops, long-lived token</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>SOPO Firestore Analytics</strong> — Full read access<div class="sub">users, deposits, tables, tournaments, KYC, game summaries</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Google Postmaster Tools</strong> — Domain reputation tracking<div class="sub">Deliverability monitoring for newsletter</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">📰</span> Content Published</div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Newsletter Issues #1, #2, #3</strong><div class="sub">"He mucked the chop." • "Nobody knows his name." — ~2,483 delivered each</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>EPT Paris 2026 article</strong> — Jorge Abreu wins €1M<div class="sub">pokerflops.org/jorge-abreu-wins-ept-paris-2026</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Chauncey Billups article</strong> — Federal charges for rigged poker game<div class="sub">pokerflops.org/chauncey-billups-federal-charges-rigged-poker-game</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>WSOP 2026 Schedule Tool</strong> — All 100 events, filters, bankroll planner<div class="sub">Calendar export, share to X, newsletter signup CTA</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>PokerFlops v4 Site Redesign</strong> — GitHub Pages, mobile-responsive<div class="sub">Homepage + 5 inner pages</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Research Cron</strong> — Hourly rotation across 7 research angles<div class="sub">Poker news · sweepstakes intel · content angles · Polymarket · influencer</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Twitter Reply Bot</strong> — Auto-engages poker accounts<div class="sub">GPT-4o scoring, SKIP threshold, @TeamPokerFlops</div></div></div>
+  </div>
+
+</div>
+
+<!-- IN PROGRESS -->
+<div class="section-label">🔨 In Progress</div>
+<div class="grid-3">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">✂️</span> AI Clip Maker</div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Word-level karaoke captions</strong><div class="sub">Whisper API word timestamps, gold highlight, 3-word groups</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>AI moment selection</strong><div class="sub">GPT-4o reads transcript, picks viral moments with virality score</div></div></div>
+    <div class="item"><span class="pill wip">IN PROGRESS</span><div class="item-text"><strong>Dynamic crop / reframe</strong><div class="sub">Vision API samples 6 frames, per-segment crop, follows action</div></div></div>
+    <div class="item"><span class="pill wip">IN PROGRESS</span><div class="item-text"><strong>Caption + crop integrated</strong><div class="sub">Captions standalone ✅, integrating into pipeline</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Card overlay (poker-specific)</strong><div class="sub">HUD reading from 16:9 source, progressive board reveal</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Hook text overlay</strong><div class="sub">AI-generated title burned into first 2-3 seconds</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Agent-callable CLI</strong><div class="sub">python3 clip.py --url &lt;youtube&gt; → ready-to-post MP4s</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">📧</span> Newsletter Pipeline</div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Send infrastructure</strong><div class="sub">scripts/send-newsletter.py, Resend API, subscriber HTTP fetch</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>SOPO CTA block</strong><div class="sub">playsopo.com UTM links in all future issues</div></div></div>
+    <div class="item"><span class="pill wip">IN PROGRESS</span><div class="item-text"><strong>Domain reputation</strong><div class="sub">Postmaster Tools registered, DMARC at p=none</div></div></div>
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>SOPO email campaign</strong><div class="sub">DNS not fixed by devs yet — can't email SOPO users</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>DMARC tighten</strong><div class="sub">p=none → p=quarantine once reputation establishes</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Plain-text multipart</strong><div class="sub">Gmail deliverability improvement for Issue #4+</div></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">📊</span> Analytics + SEO</div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Ahrefs Webmaster Tools</strong><div class="sub">Weekly Sunday audit, backlink monitoring</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>Google Search Console</strong><div class="sub">19 pages indexed, sitemap submitted</div></div></div>
+    <div class="item"><span class="pill done">DONE</span><div class="item-text"><strong>SOPO Firestore read access</strong><div class="sub">45K+ users, deposits, game data, KYC</div></div></div>
+    <div class="item"><span class="pill wip">IN PROGRESS</span><div class="item-text"><strong>Internal linking audit</strong><div class="sub">HCL cluster built, linking gaps identified</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>SOPO CMS backend access</strong><div class="sub">Coming from devs — user funnels, conversion data</div></div></div>
+  </div>
+
+</div>
+
+<!-- AGENT PIPELINE (Jordan's context) -->
+<div class="section-label">🤖 Agent Pipeline — Current + Planned</div>
+<div class="grid-2">
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🪱</span> Mr. Sandworm (this agent) — What I Run</div>
+    <div class="item"><span class="pill done">LIVE</span><div class="item-text"><strong>Content pipeline</strong> — finds news, drafts articles, publishes to WordPress on approval</div></div>
+    <div class="item"><span class="pill done">LIVE</span><div class="item-text"><strong>Newsletter</strong> — writes, sends, tracks delivery for 2,483 subs</div></div>
+    <div class="item"><span class="pill done">LIVE</span><div class="item-text"><strong>Social posting</strong> — Twitter/X, Instagram (approval gate)</div></div>
+    <div class="item"><span class="pill done">LIVE</span><div class="item-text"><strong>Event queue</strong> — monitors YouTube streams, RSS for content opportunities</div></div>
+    <div class="item"><span class="pill done">LIVE</span><div class="item-text"><strong>Research cron</strong> — hourly poker news + sweepstakes intel rotation</div></div>
+    <div class="item"><span class="pill done">LIVE</span><div class="item-text"><strong>Polymarket trading</strong> — autonomous trades, AI/crypto focus, NordVPN proxied</div></div>
+    <div class="item"><span class="pill wip">BUILDING</span><div class="item-text"><strong>Clip maker</strong> — AI clips from any YouTube/Kick URL → captioned 9:16 MP4</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="icon">🐝</span> Jordan's Agent Swarms — Integration Point</div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Clip maker as shared tool</strong><div class="sub">Any agent calls: python3 clip.py --url &lt;stream_url&gt; --max-clips 5<br>Gets back: ready-to-post captioned 9:16 MP4s</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>SOPO stream auto-clipping</strong><div class="sub">Kick streams → AI clips → agents post across TikTok/Reels/Shorts/X<br>No human in the loop</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Narrative push campaigns</strong><div class="sub">Coordinated content drops across timelines<br>Clip → reply thread → social proof cascade</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>Auto-posting</strong><div class="sub">TikTok API · YouTube Shorts API · Instagram Reels<br>Already have Twitter + Instagram, TikTok + YouTube to add</div></div></div>
+    <div class="item"><span class="pill planned">PLANNED</span><div class="item-text"><strong>SOPO Pro content</strong><div class="sub">International stream clips, crypto poker angles, SOPO Pro signup funnels</div></div></div>
+  </div>
+
+</div>
+
+<!-- BLOCKED / PENDING -->
+<div class="section-label">🔴 Blocked / Pending External Action</div>
+<div class="grid-3">
+  <div class="card">
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>SOPO email campaign</strong><div class="sub">Devs need to fix DNS records</div></div></div>
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>Templated.io carousels</strong><div class="sub">Browser extension not connected</div></div></div>
+  </div>
+  <div class="card">
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>Qwoted journalist outreach</strong><div class="sub">Needs @pokerflops.org business email setup</div></div></div>
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>/play-sopo page</strong><div class="sub">404 on pokerflops.org — devs need to build it</div></div></div>
+  </div>
+  <div class="card">
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>SOPO CMS backend</strong><div class="sub">Devs haven't provided access yet</div></div></div>
+    <div class="item"><span class="pill blocked">BLOCKED</span><div class="item-text"><strong>DMARC tighten</strong><div class="sub">Waiting for email reputation to build first</div></div></div>
+  </div>
+</div>
+
+<p style="color: #444; font-size: 12px; margin-top: 32px; text-align: center;">Generated by Mr. Sandworm 🪱 · March 3, 2026 · pokerflops.org × playsopo.com</p>
+
+</body>
+</html>
